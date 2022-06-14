@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Docente extends Model
+class Ensena extends Model
 {
     use HasFactory;
 
-    public function ensena()
+    public function docente()
     {
-        return $this->hasMany(Ensena::class);
+        return $this->belongsTo(Docente::class, 'docente_id');
     }
 }

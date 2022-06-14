@@ -11,7 +11,7 @@
     <div>
         <h2>Docentes en lista </h2>
         @foreach ($docentes as $d)
-        <div>
+        <div style="background-color: gold; margin-bottom: 20px">
             <h3>id {{$d->id}}</h3>
             <h3>nombre {{$d->nombre}}</h3>
             <h3>apellido {{$d->apellido}}</h3>

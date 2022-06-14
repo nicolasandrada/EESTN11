@@ -13,18 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('docentes', function (Blueprint $table) {
-
+        Schema::create('ensenas', function (Blueprint $table) {
             $table->id();
-
-            $table->string('nombre',20);
-            $table->string('apellido',20);
-            $table->integer('dni');
-            $table->bigInteger('cuil');
-            $table->date('fecha_nacimiento');
-
-            $table->string('foto');
-
+            $table->string('materia', 100);
+            $table->foreignId('docente_id')->constrained('docentes');
             $table->timestamps();
         });
     }
@@ -36,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('docentes');
+        Schema::dropIfExists('ensenas');
     }
 };

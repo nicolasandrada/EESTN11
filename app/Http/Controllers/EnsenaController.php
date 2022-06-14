@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Docente;
+use App\Models\Ensena;
 use Illuminate\Http\Request;
 
-class DocenteController extends Controller
+class EnsenaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class DocenteController extends Controller
      */
     public function index()
     {
-        $docentes = Docente::paginate(20);
-
-        return view('welcome')->with('docentes',$docentes);
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class DocenteController extends Controller
      */
     public function create()
     {
-        return view('registro');
+        //
     }
 
     /**
@@ -37,20 +35,16 @@ class DocenteController extends Controller
      */
     public function store(Request $request)
     {
-        $docente = $request->except('_token');
-
-        Docente::insert($docente);
-
-        return redirect('/');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Docente  $docente
+     * @param  \App\Models\Ensena  $ensena
      * @return \Illuminate\Http\Response
      */
-    public function show(Docente $docente)
+    public function show(Ensena $ensena)
     {
         //
     }
@@ -58,10 +52,10 @@ class DocenteController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Docente  $docente
+     * @param  \App\Models\Ensena  $ensena
      * @return \Illuminate\Http\Response
      */
-    public function edit(Docente $docente)
+    public function edit(Ensena $ensena)
     {
         //
     }
@@ -70,10 +64,10 @@ class DocenteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Docente  $docente
+     * @param  \App\Models\Ensena  $ensena
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Docente $docente)
+    public function update(Request $request, Ensena $ensena)
     {
         //
     }
@@ -81,10 +75,10 @@ class DocenteController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Docente  $docente
+     * @param  \App\Models\Ensena  $ensena
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Docente $docente)
+    public function destroy(Ensena $ensena)
     {
         //
     }
