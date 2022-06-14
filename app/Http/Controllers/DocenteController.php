@@ -14,7 +14,7 @@ class DocenteController extends Controller
      */
     public function index()
     {
-        $docentes = Docente::paginate(20);
+        $docentes = Docente::paginate(2);
 
         return view('welcome')->with('docentes',$docentes);
     }
@@ -37,6 +37,7 @@ class DocenteController extends Controller
      */
     public function store(Request $request)
     {
+
         $docente = $request->except('_token');
 
         Docente::insert($docente);

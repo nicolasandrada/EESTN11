@@ -30,6 +30,9 @@
             <label for="">Fecha de nacimiento</label>
             <input type="date" name="fecha_nacimiento" id="">
 
+            <label for="">Foto</label>
+            <input type="file" name="foto" id="">
+
             <input type="submit" value="Guardar">
         </form>
     </div>
