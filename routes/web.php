@@ -14,6 +14,8 @@ use App\Http\Controllers\DocenteController;
 |
 */
 
-Route::get('/', [DocenteController::class, 'index']);
-Route::get('/guardarDocente', [DocenteController::class, 'create']);
-Route::post('/guardarDocente', [DocenteController::class, 'store']);
+//Route::get('/', [DocenteController::class, 'index']);
+//Route::get('/guardarDocente', [DocenteController::class, 'create']);
+//Route::post('/guardarDocente', [DocenteController::class, 'store']);
+
+Route::resource('/docente', DocenteController::class);

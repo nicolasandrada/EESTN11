@@ -40,6 +40,10 @@ class DocenteController extends Controller
 
         $docente = $request->except('_token');
 
+        if($request->hasFile('foto')){
+            $docente['foto']= $request->file('foto')->store('fotodocentes','public');
+        }
+
         Docente::insert($docente);
 
         return redirect('/');

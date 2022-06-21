@@ -13,7 +13,7 @@
 <body>
     <h1>EEST 11 - Islas Malvinas </h1>
     <div class="row ">
-        <form class="col-6" action="/guardarDocente" method="post">
+        <form class="col-6" action="/docente" method="post" enctype="multipart/form-data">
             @csrf
             <label for="">Nombre</label>
             <input type="text" name="nombre" id="">
