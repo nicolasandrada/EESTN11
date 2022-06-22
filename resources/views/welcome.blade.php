@@ -17,6 +17,18 @@
             <h3>nombre {{$d->nombre}}</h3>
             <h3>apellido {{$d->apellido}}</h3>
 
+
+            <form action="/docente/{{ $d->id }}/edit" method="get">
+
+                <input type="submit" value="Modificar" >
+            </form>
+
+            <form action="/docente/{{ $d->id }}" method="post">
+                @csrf
+                {{ method_field('DELETE') }}
+                <input type="submit" value="Eliminar" onclick="return confirm('Esta seguro que quiere eliminar???')">
+            </form>
+
         </div>
         @endforeach
 

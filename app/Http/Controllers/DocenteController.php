@@ -66,9 +66,11 @@ class DocenteController extends Controller
      * @param  \App\Models\Docente  $docente
      * @return \Illuminate\Http\Response
      */
-    public function edit(Docente $docente)
+    public function edit($id)
     {
-        //
+        $docente = Docente::find( $id );
+
+        return view('actualizar')->with('docente', $docente);
     }
 
     /**
@@ -78,9 +80,15 @@ class DocenteController extends Controller
      * @param  \App\Models\Docente  $docente
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Docente $docente)
+    public function update(Request $request, $id)
     {
-        //
+        $docente = Docente::find($id);
+
+        $docentenuevo = $request->except(['_token','_method']);
+
+        $docente->update($docentenuevo);
+
+        return redirect('/docente/'.$id.'/edit');
     }
 
     /**
@@ -89,8 +97,11 @@ class DocenteController extends Controller
      * @param  \App\Models\Docente  $docente
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Docente $docente)
+    public function destroy($id)
     {
-        //
+
+        Docente::destroy($id);
+
+        return redirect('/docente');
     }
 }

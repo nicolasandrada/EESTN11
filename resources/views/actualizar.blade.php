@@ -11,10 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>EEST 11 - Islas Malvinas </h1>
+    <h1>Modificar docente - EEST 11 - Islas Malvinas </h1>
     <div class="row ">
-        <form class="col-6" action="/docente" method="post" enctype="multipart/form-data">
+        <form class="col-6" action="/docente/{{$docente->id}}" method="post" enctype="multipart/form-data">
             @csrf
+            {{ method_field('PATCH') }}
             @include('extras/formularioDocente');
         </form>
     </div>
