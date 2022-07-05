@@ -1,0 +1,26 @@
+INTRODUCCION
+
+//Crear nuevo proyecto de laravel
+composer create-project laravel/laravel nombre_del_proyecto|
+
+//Crear modelo de base de datos (con migracion, constructor y recurso)
+php artisan make:model Mi_modelo -migracion
+
+//Ejecutar migracion
+php artisan migrate
+
+//Actualizar migracion
+php artisan migrate:refresh
+
+//Ejecutar servidor de laravel
+php artisan serve
+
+CLONACION
+
+//Instalar complementos
+composer install
+
+//Actualizar complementos
+composer update
+
+
