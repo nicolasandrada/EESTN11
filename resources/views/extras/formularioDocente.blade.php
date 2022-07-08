@@ -1,5 +1,5 @@
 <label for="">Nombre</label>
-<input class="form-control" type="text" name="nombre" id="" >
+<input class="form-control" type="text" name="nombre" id="" value="{{isset($docente->nombre)?$docente->nombre:""}}">
 
 <label for="">Apellido</label>
 <input class="form-control" type="text" name="apellido" id="" >
